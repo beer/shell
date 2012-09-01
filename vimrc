@@ -71,6 +71,7 @@ set t_AB=[48;5;%dm
 set t_AF=[38;5;%dm
 if has("gui_running")	" GUI color and font settings
   set guifont=Osaka-Mono:h20
+  "set guifont=MONACO:h20
   set cursorline        " highlight current line
   colors moria
   highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
