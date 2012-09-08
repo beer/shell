@@ -45,6 +45,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'skammer/vim-css-color'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 " " origin repos on vim scripts
 "Bundle "showcolor"
 
@@ -221,6 +223,7 @@ nmap <C-u> :set encoding=utf8<CR>
 nmap <C-b> :set encoding=big5<CR>
 nmap <C-t> :set fileencoding=utf8<CR>
 nmap <C-i> :set fileencoding=big5<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 
 au FileType html set ft=xml
@@ -281,4 +284,5 @@ hi link EasyMotionShade  Comment
 
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
+let g:nerdtree_tabs_open_on_console_startup=1
 
