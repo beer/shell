@@ -44,8 +44,9 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'skammer/vim-css-color'
 " " origin repos on vim scripts
-" Bundle "showcolor"
+"Bundle "showcolor"
 
 
 filetype plugin indent on
@@ -77,7 +78,8 @@ if has("gui_running")	" GUI color and font settings
   highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors desert256
+  "colors desert256
+  colors ir_black
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default

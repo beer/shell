@@ -27,3 +27,5 @@
   ui = auto
 [apply]
   whitespace = nowarn
+[core]
+	editor = /usr/bin/vim
