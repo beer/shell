@@ -113,10 +113,10 @@ esac
 
 force_color_prompt=yes
 if [ ! ${WINDOW} ]; then
-    PS1="\[\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h \[\e[0m\][\[\e[32m\]\w\[\e[0m\]] (\[\e[36m\]\A\[\e[0m\])\[\e[0m\] \[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+    PS1="\[\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h \[\e[0m\][\[\e[32m\]\w\[\e[0m\]] (\[\e[36m\]\A\[\e[0m\])\[\e[0m\] \[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]\n$ "
 else
     #PS1="\[\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h \[\e[0m\][\[\e[32m\]\w\[\e[0m\]] (\[\e[36m\]\A\[\e[0m\]/\[\e[36m\]W${WINDOW}\[\e[0m\]]\[\e[0m\] "
-    PS1="\[\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h \[\e[0m\][\[\e[32m\]\w\[\e[0m\]] \[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+    PS1="\[\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h \[\e[0m\][\[\e[32m\]\w\[\e[0m\]] \[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]\n$ "
 fi
 
 if [ "$TERM" == "vt100" ] || [ "$TERM" == "ansi" ]; then
