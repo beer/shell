@@ -1,5 +1,5 @@
-" far's vimrc
-" Huang-Lin (Far) Tseng <farrrr@gmail.com>
+" beer's vimrc
+" Beer Lee <beer@pivmi.info>
 
 " General Settings
 " For pathogen.vim: auto load all plugins in .vim/bundle
@@ -12,6 +12,8 @@ set autoread 		" auto read when file is changed from outside
 set noerrorbells
 set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
+set nocp
+set cursorline
 
 
 filetype off 		" Enable filetype detection
@@ -44,11 +46,10 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'skammer/vim-css-color'
-Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 " " origin repos on vim scripts
-"Bundle "showcolor"
+"Bundle 'showcolor'
+"Bundle 'skammer/vim-css-color'
 
 
 filetype plugin indent on
@@ -107,10 +108,21 @@ set novisualbell
 " set t_vb=
 set tm=500
 
+" TAB Page setting{
+   set switchbuf=usetab
+   "nmap <C-Tab> :tabn<CR>
+   nmap <C-n> :tabn<CR>
+   "nmap <C-S-Tab> :tabp<CR>
+   nmap <C-p> :tabp<CR>
+   nmap <C-t> :tabnew<CR>
+"}
+
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
    set softtabstop=4 
    set shiftwidth=4 
+   set tabstop=4
+   set smarttab
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -156,6 +168,8 @@ cnoremap <C-K>      <C-U>
 
 " \p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
+" \n toggles NERDTree 
+nmap <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
@@ -219,11 +233,10 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 
-nmap <C-u> :set encoding=utf8<CR>
-nmap <C-b> :set encoding=big5<CR>
-nmap <C-t> :set fileencoding=utf8<CR>
-nmap <C-i> :set fileencoding=big5<CR>
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+"nmap <C-u> :set encoding=utf8<CR>
+"nmap <C-b> :set encoding=big5<CR>
+"nmap <C-t> :set fileencoding=utf8<CR>
+"nmap <C-i> :set fileencoding=big5<CR>
 
 
 au FileType html set ft=xml
