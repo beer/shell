@@ -86,6 +86,7 @@ case $operatesystem in
     alias ls="ls -aFG"
     alias ll='ls -alG --color | less -r'
     alias grep="/usr/bin/grep --color"
+    alias py="/usr/local/Cellar/python3/3.2.1/bin/python3"
     ;;
   "FreeBSD")
     alias ls="ls -aFGg"
