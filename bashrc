@@ -12,6 +12,7 @@ alias irssi="export TERM=screen-256color;irssi"
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias sshp="ssh -p 222"
+alias ptop="pg_top -d eatgo -h 10.10.1.131 -p 5433 -U eatgouser -s 1"
 
 # man bash
 HISTFILESIZE=5000
