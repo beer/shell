@@ -224,6 +224,11 @@ let use_xhtml = 1
 au FileType html set ft=xml
 au FileType html set syntax=html
 
+" -----------------------------------
+"  PHP related
+" -----------------------------------
+vnoremap g "zdi<?= _('<C-R>z'); ?><ESC>
+vnoremap t "zdi_(<C-R>z)<ESC>
 
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
