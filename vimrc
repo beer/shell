@@ -32,7 +32,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-"Bundle 'vim-scripts/YankRing.vim'
+Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/VisIncr'
 Bundle 'wincent/Command-T'
 Bundle 'shawncplus/phpcomplete.vim'
@@ -46,6 +46,7 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/html5.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 " " origin repos on vim scripts
 "Bundle 'showcolor'
@@ -169,7 +170,7 @@ cnoremap <C-K>      <C-U>
 " \p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
 " \n toggles NERDTree 
-nmap <Leader>n <plug>NERDTreeTabsToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
@@ -302,5 +303,7 @@ hi link EasyMotionShade  Comment
 
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
+" --- NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeShowBookmarks=1
 
