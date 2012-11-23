@@ -32,7 +32,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/YankRing.vim'
+"Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/VisIncr'
 Bundle 'wincent/Command-T'
 Bundle 'shawncplus/phpcomplete.vim'
@@ -48,6 +48,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'hallettj/jslint.vim'
 " " origin repos on vim scripts
 "Bundle 'showcolor'
 "Bundle 'skammer/vim-css-color'
@@ -304,6 +305,6 @@ hi link EasyMotionShade  Comment
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
 " --- NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
+"let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowBookmarks=1
 
