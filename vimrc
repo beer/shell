@@ -313,16 +313,16 @@ let g:Powerline_symbols = 'fancy'
 "let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowBookmarks=1
 
-" QuickFix Window Toggle
-com! -bang -nargs=? QFix cal QFixToggle(<bang>0)
-fu! QFixToggle(forced)
-    if exists("g:qfix_win") && a:forced == 0
-        cclose
-        unlet g:qfix_win
-    else
-        copen 10
-        let g:qfix_win = bufnr("$")
-    en
-endf
-nn <leader>q :QFix<CR>
-nn <leader>n :cn<CR>
+"" QuickFix Window Toggle
+"com! -bang -nargs=? QFix cal QFixToggle(<bang>0)
+"fu! QFixToggle(forced)
+"    if exists("g:qfix_win") && a:forced == 0
+"        cclose
+"        unlet g:qfix_win
+"    else
+"        copen 10
+"        let g:qfix_win = bufnr("$")
+"    en
+"endf
+"nn <leader>q :QFix<CR>
+"nn <leader>n :cn<CR>
