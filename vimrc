@@ -48,7 +48,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'hallettj/jslint.vim'
+Bundle 'wookiehangover/jshint.vim'
 " " origin repos on vim scripts
 "Bundle 'showcolor'
 "Bundle 'skammer/vim-css-color'
@@ -232,6 +232,11 @@ au FileType html set syntax=html
 vnoremap g "zdi<?= _('<C-R>z'); ?><ESC>
 vnoremap t "zdi_(<C-R>z)<ESC>
 
+" -----------------------------------
+"  JS related
+" -----------------------------------
+vnoremap c "zdi$.i18n._(<C-R>z)<ESC>
+
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
 "--------------------------------------------------------------------------- 
@@ -308,3 +313,16 @@ let g:Powerline_symbols = 'fancy'
 "let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowBookmarks=1
 
+" QuickFix Window Toggle
+com! -bang -nargs=? QFix cal QFixToggle(<bang>0)
+fu! QFixToggle(forced)
+    if exists("g:qfix_win") && a:forced == 0
+        cclose
+        unlet g:qfix_win
+    else
+        copen 10
+        let g:qfix_win = bufnr("$")
+    en
+endf
+nn <leader>q :QFix<CR>
+nn <leader>n :cn<CR>

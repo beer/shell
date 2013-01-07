@@ -29,3 +29,21 @@
   whitespace = nowarn
 [core]
 	editor = /usr/bin/vim
+[merge]
+   tool = whatever_you_want
+[mergetool "whatever_you_want"]
+#    cmd = "gvim --noplugin --remote-tab-silent \"+set buftype=nowrite\"
+#    \"$PWD/$MERGED\" && sleep 1;\
+#           gvim --remote-send \":split $PWD/$REMOTE<CR>:set
+#buftype=nowrite<CR>:vertical diffsplit $PWD/$LOCAL<CR>:vertical diffsplit
+#$PWD/$BASE<CR>:set buftype=nowrite<CR><C-W>l\""
+#    cmd = "gvim --noplugin \"$PWD/$MERGED\" \
+#        +\":split $PWD/$REMOTE\" +\":set buftype=nowrite\" \
+#        +\":vertical diffsplit $PWD/$LOCAL\" +\":set buftype=nowrite\" \
+#        +\":vertical diffsplit $PWD/$BASE\" +\":set buftype=nowrite\" \
+#        +\":wincmd l\""
+   cmd = "vim --noplugin \"$PWD/$MERGED\" \
+       +\":split $PWD/$REMOTE\" +\":set buftype=nowrite\" \
+       +\":vertical diffsplit $PWD/$LOCAL\" +\":set buftype=nowrite\" \
+       +\":vertical diffsplit $PWD/$BASE\" +\":set buftype=nowrite\" \
+       +\":wincmd l\""

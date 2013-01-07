@@ -13,6 +13,7 @@ alias cd..="cd .."
 alias cd...="cd ../.."
 alias sshp="ssh -p 222"
 alias ptop="pg_top -d eatgo -h 10.10.1.131 -p 5433 -U eatgouser -s 1"
+alias work="ssh work.eatgo.com -p222"
 
 # man bash
 HISTFILESIZE=5000
@@ -124,3 +125,6 @@ fi
 if [ "$TERM" == "vt100" ] || [ "$TERM" == "ansi" ]; then
  LANG=zh_TW.big5
 fi
+
+export PYTHONPATH=~/lib/python2.7/site-packages
+export PATH=~/bin:$PATH
