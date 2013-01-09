@@ -44,7 +44,7 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'skammer/vim-css-color'
+"Bundle 'skammer/vim-css-color'
 " " origin repos on vim scripts
 "Bundle "showcolor"
 
