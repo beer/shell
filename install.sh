@@ -6,4 +6,5 @@ ln -s git/shell/screenrc .screenrc
 ln -s git/shell/bashrc .bashrc
 ln -s git/shell/bash_profile .bash_profile
 ln -s git/shell/gitconfig .gitconfig
-#ln -s git/shell/tmux.conf .tmux.conf
+ln -s git/shell/tmux.conf .tmux.conf
+ln -s git/shell/tmux .tmux

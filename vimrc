@@ -1,5 +1,5 @@
-" far's vimrc
-" Huang-Lin (Far) Tseng <farrrr@gmail.com>
+" beer's vimrc
+" Beer Lee <beer@pivmi.info>
 
 " General Settings
 " For pathogen.vim: auto load all plugins in .vim/bundle
@@ -12,6 +12,8 @@ set autoread 		" auto read when file is changed from outside
 set noerrorbells
 set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
+set nocp
+set cursorline
 
 
 filetype off 		" Enable filetype detection
@@ -44,9 +46,12 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'skammer/vim-css-color'
+Bundle 'othree/html5.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'wookiehangover/jshint.vim'
 " " origin repos on vim scripts
-"Bundle "showcolor"
+"Bundle 'showcolor'
+"Bundle 'skammer/vim-css-color'
 
 
 filetype plugin indent on
@@ -105,10 +110,21 @@ set novisualbell
 " set t_vb=
 set tm=500
 
+" TAB Page setting{
+   set switchbuf=usetab
+   "nmap <C-Tab> :tabn<CR>
+   nmap <C-n> :tabn<CR>
+   "nmap <C-S-Tab> :tabp<CR>
+   nmap <C-p> :tabp<CR>
+   nmap <C-t> :tabnew<CR>
+"}
+
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
    set softtabstop=4 
    set shiftwidth=4 
+   set tabstop=4
+   set smarttab
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -154,6 +170,8 @@ cnoremap <C-K>      <C-U>
 
 " \p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
+" \n toggles NERDTree 
+nmap <leader>n :NERDTreeToggle<CR>
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
@@ -208,6 +226,16 @@ let use_xhtml = 1
 au FileType html set ft=xml
 au FileType html set syntax=html
 
+" -----------------------------------
+"  PHP related
+" -----------------------------------
+vnoremap g "zdi<?= _('<C-R>z'); ?><ESC>
+vnoremap t "zdi_(<C-R>z)<ESC>
+
+" -----------------------------------
+"  JS related
+" -----------------------------------
+vnoremap c "zdi$.i18n._(<C-R>z)<ESC>
 
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
@@ -217,10 +245,10 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 
-nmap <C-u> :set encoding=utf8<CR>
-nmap <C-b> :set encoding=big5<CR>
-nmap <C-t> :set fileencoding=utf8<CR>
-nmap <C-i> :set fileencoding=big5<CR>
+"nmap <C-u> :set encoding=utf8<CR>
+"nmap <C-b> :set encoding=big5<CR>
+"nmap <C-t> :set fileencoding=utf8<CR>
+"nmap <C-i> :set fileencoding=big5<CR>
 
 
 au FileType html set ft=xml
@@ -281,4 +309,20 @@ hi link EasyMotionShade  Comment
 
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
+" --- NERDTree
+"let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeShowBookmarks=1
 
+"" QuickFix Window Toggle
+"com! -bang -nargs=? QFix cal QFixToggle(<bang>0)
+"fu! QFixToggle(forced)
+"    if exists("g:qfix_win") && a:forced == 0
+"        cclose
+"        unlet g:qfix_win
+"    else
+"        copen 10
+"        let g:qfix_win = bufnr("$")
+"    en
+"endf
+"nn <leader>q :QFix<CR>
+"nn <leader>n :cn<CR>
