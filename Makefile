@@ -30,3 +30,5 @@ clean:
 	[ -f "~/.vimrc" ] && rm ~/.vimrc
 	[ -d "~/.vim" ] && rm -rf ~/.vim
 	@echo "Clean All Config file"
+
+jfkdsfdsakfjldsakjflds
