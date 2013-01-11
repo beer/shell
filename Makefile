@@ -31,5 +31,5 @@ clean:
 	[ -d "~/.vim" ] && rm -rf ~/.vim
 	@echo "Clean All Config file"
 	fkdjsalfkjdlsaf
-	fjdlaskfjlkdsajfdsa'
-	fjdlasjfkldsajfldajsfds
+
+jfkdsfdsakfjldsakjflds
