@@ -12,8 +12,9 @@ alias irssi="export TERM=screen-256color;irssi"
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias sshp="ssh -p 222"
-alias ptop="pg_top -d eatgo -h 10.10.1.131 -p 5433 -U eatgouser -s 1"
-alias work="ssh work.eatgo.com -p222"
+alias ptop="pg_top -d crazymoney -h 10.8.0.4 -p 5432 -U pguser -s 1"
+alias work="ssh beer@crazy-money.online"
+alias win="ssh Administrator@10.25.96.4"
 
 # man bash
 HISTFILESIZE=5000
@@ -128,3 +129,8 @@ fi
 
 export PYTHONPATH=~/lib/python2.7/site-packages
 export PATH=~/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
