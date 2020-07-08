@@ -12,9 +12,16 @@ alias irssi="export TERM=screen-256color;irssi"
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias sshp="ssh -p 222"
+<<<<<<< HEAD
 alias ptop="pg_top -d crazymoney -h 10.8.0.4 -p 5432 -U pguser -s 1"
 alias work="ssh beer@crazy-money.online"
 alias win="ssh Administrator@10.25.96.4"
+=======
+alias ptop="pg_top -d crazymoney -h localhost -p 5432 -U pguser -s 1"
+alias work="ssh work.eatgo.com -p222"
+alias pgsql="psql -d crazymoney -h localhost -U pguser"
+alias mynetstat="netstat -plntu"
+>>>>>>> 4bfa96ab891ec5c1cf8e7fd2b2e7e5b7bf0d1df9
 
 # man bash
 HISTFILESIZE=5000
@@ -48,6 +55,10 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
+# For Spark
+export SPARK_HOME=/opt/spark
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
